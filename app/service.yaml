@@ -1,0 +1,15 @@
+# app/service.yaml
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ecommerce-service
+  labels:
+    app: ecommerce
+spec:
+  selector:
+    app: ecommerce-app
+  type: LoadBalancer
+  ports:
+    - port: 8500
+      targetPort: 8500
